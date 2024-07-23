@@ -1,4 +1,4 @@
-package algorithms.xplorer;
+package algorithms.xplorer.problems;
 
 public class GenericClass {
 

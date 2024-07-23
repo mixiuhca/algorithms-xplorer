@@ -3,6 +3,8 @@ package algorithms.xplorer;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
+
+import algorithms.xplorer.problems.GenericClass;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
