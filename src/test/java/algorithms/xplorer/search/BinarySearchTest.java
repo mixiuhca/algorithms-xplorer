@@ -2,38 +2,29 @@ package algorithms.xplorer.search;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import algorithms.xplorer.BinarySearch;
+import algorithms.xplorer.impl.IterativeBinarySearch;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class BinarySearchTest {
 
-  private BinarySearch search;
+  private BinarySearch binarySearch;
 
   @BeforeEach
   void setUp() {
-    search = new BinarySearch();
+    binarySearch = new IterativeBinarySearch();
   }
 
   @Test
-  void binarySearchTest() {
+  void binarySearchIterativeTest() {
     int[] array = new int[1000];
     for (int i = 0; i < array.length; i++) {
       array[i] = i + 1;
     }
-    int target = 37;
-    int expectedIndex = search.binarySearch(array, target);
-    assertEquals(36, expectedIndex);
-  }
-
-  @Test
-  void binarySearchV2Test() {
-    int[] array = new int[10];
-    for (int i = 0; i < array.length; i++) {
-      array[i] = i + 1;
-    }
-    int target = 10;
-    int expectedIndex = search.binarySearchV2(array, target);
-    assertEquals(9, expectedIndex);
+    int target = 59;
+    int expectedIndex = binarySearch.binarySearch(array, target);
+    assertEquals(58, expectedIndex);
   }
 
   @Test
@@ -42,8 +33,8 @@ class BinarySearchTest {
     for (int i = 0; i < array.length; i++) {
       array[i] = i + 1;
     }
-    int target = 37;
-    int expectedIndex = search.binarySearchRecursive(array, target, 0, array.length - 1);
-    assertEquals(36, expectedIndex);
+    int target = 87;
+    int expectedIndex = binarySearch.binarySearch(array, target);
+    assertEquals(86, expectedIndex);
   }
 }
